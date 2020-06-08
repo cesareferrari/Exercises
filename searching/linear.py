@@ -10,8 +10,8 @@ def find_value(items, value):
 
 my_list = ["a", "b", "c", "d", "e"]
 result = find_value(my_list, "c")
-print(result)   # -> c
+print(result == "c")   # -> True
 
 result = find_value(my_list, "z")
-print(result)   # -> False
+print(result == False)   # -> True
 

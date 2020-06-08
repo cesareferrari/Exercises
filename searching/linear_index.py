@@ -8,7 +8,6 @@ Returns False if item not found.
 def find_value(items, value):
     pass
 
-
 my_list = ["a", "b", "c", "d", "e"]
 result = find_value(my_list, "c")
 print(result == 2)  
