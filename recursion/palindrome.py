@@ -12,6 +12,5 @@ def is_palindrome(string):
 
 string1 = "Hello"
 string2 = "aabcddcbaa"
-
 print(is_palindrome(string1) == False) # --> True
 print(is_palindrome(string2) == True)  # --> True
