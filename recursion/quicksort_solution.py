@@ -37,7 +37,7 @@ def quicksort(items):
     return quicksort(left) + [pivot] + quicksort(right)
 
 
-items = [3, 6, 1, 5, 4, 2]
-print(quicksort(items) == [1, 2, 3, 4, 5, 6])  # --> True
-print(items == [3, 6, 1, 5, 4, 2])             # --> True
+items = [3, 6, 1, 5, 3, 4, 2]
+print(quicksort(items) == [1, 2, 3, 3, 4, 5, 6])  # --> True
+print(items == [3, 6, 1, 5, 3, 4, 2])             # --> True
 

@@ -6,11 +6,7 @@ Returns False if item not found.
 """
 
 def find_value(items, value):
-    for i in range(len(items)):
-        if items[i] == value:
-            return i
-
-    return False
+    pass
 
 my_list = ["a", "b", "c", "d", "e"]
 result = find_value(my_list, "c")

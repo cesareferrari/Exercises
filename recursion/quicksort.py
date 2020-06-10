@@ -11,26 +11,9 @@ Algorithm:
 """
 
 def partition(arr):
-    pivot = arr[0]
-    left = []
-    right = []
-
-    for item in arr[1:]:
-        if item > pivot:
-            right.append(item)
-        else:
-            left.append(item)
-
-    return left, pivot, right
-
 
 def quicksort(items):
-    if len(items) <= 1:
-        return items
-
-    left, pivot, right = partition(items)
-
-    return quicksort(left) + [pivot] + quicksort(right)
+    pass
 
 
 items = [3, 6, 1, 5, 4, 2]
