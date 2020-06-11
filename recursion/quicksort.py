@@ -10,8 +10,6 @@ Algorithm:
 4. repeat steps 1 to 3 on the left hand side and right hand side of the partition
 """
 
-def partition(arr):
-
 def quicksort(items):
     pass
 

@@ -1,4 +1,4 @@
-def merge(arrA, arrB):
+def merge(left, right):
     pass
 
 

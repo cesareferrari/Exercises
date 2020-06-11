@@ -1,51 +1,52 @@
-def merge(arrA, arrB):
-    # elements = len(arrA) + len(arrB)
-    # array that holds the sorted elements from A and B
-    # merged_arr = [0] * elements
-    merged_arr = []
+def merge(left, right):
+    merged = []
 
     # initialize the pointers that start at each array
     a = 0
     b = 0
 
-    while a < len(arrA) and b < len(arrB):
+    while a < len(left) and b < len(right):
         # compare the elements where a and b point to
-        # and append the correct element from array A or B to merged_arr
-        if arrA[a] < arrB[b]:
-            merged_arr.append(arrA[a])
+        # and append the correct element from left or right array to merged
+        if left[a] < right[b]:
+            merged.append(left[a])
             a += 1
         else:
-            merged_arr.append(arrB[b])
+            merged.append(right[b])
             b += 1
 
-    # one of the lists may have extra elements:
-    # append all of them to merged_arr
-    # only one of these loops is going to run
-    while a < len(arrA):
-        merged_arr.append(arrA[a])
+    # Now one list is empty, append the rest of the elements
+    # from the other list to merged.
+    # Only one of these loops is going to run
+    while a < len(left):
+        merged.append(left[a])
         a += 1
 
-    while b < len(arrB):
-        merged_arr.append(arrB[b])
+    while b < len(right):
+        merged.append(right[b])
         b += 1
 
-    return merged_arr
+    return merged
 
 
 def merge_sort(arr):
-    # break the array down recursively
     # base case: when list is length of 1
-    if len(arr) > 1:
-        # if length more than 1: keep recursing
-        # break array down into left and right subarrays
-        # split into 2 subarrays
-        # left half contains elements from 0 to half
-        left = merge_sort(arr[:len(arr) // 2])
-        # right half contains elements from half to end
-        right = merge_sort(arr[len(arr) // 2:])
+    if len(arr) <= 1:
+        return arr
 
-        # merge them back up
-        arr = merge(left, right)
+    # if length more than 1, set a splitting point and
+    # break the array down into 2 subarrays recursively
+    split = len(arr) // 2
+    
+    # left half contains elements from 0 to splitting point
+    left = merge_sort(arr[:split])
+    # right half contains elements from splitting to end
+    right = merge_sort(arr[split:])
 
-    return arr
+    # merge them back up
+    return merge(left, right)
+
+
+
+
 
