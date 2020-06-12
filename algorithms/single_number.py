@@ -1,11 +1,19 @@
 '''
-Input: a List of integers where every int except one shows up twice
-Returns: an integer
+Given a non-empty array of integers where every element appears twice except for
+one. Find that single number. You may assume that there will always be one
+odd-number-out and every other number in the input shows up exactly twice.
+
+Examples
+
+Sample input: [2, 2, 1]
+Expected output: 1
+
+Sample iput: [4, 1, 2, 1, 2]
+Expected output: 4
 '''
 
 def single_number(arr):
     pass
-
 
 
 if __name__ == '__main__':
