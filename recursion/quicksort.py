@@ -10,28 +10,8 @@ Algorithm:
 4. repeat steps 1 to 3 on the left hand side and right hand side of the partition
 """
 
-def partition(arr):
-    pivot = arr[0]
-    left = []
-    right = []
-
-    for item in arr[1:]:
-        if item > pivot:
-            right.append(item)
-        else:
-            left.append(item)
-
-    return left, pivot, right
-
-
 def quicksort(items):
-    if len(items) <= 1:
-        return items
-
-    left, pivot, right = partition(items)
-
-    return quicksort(left) + [pivot] + quicksort(right)
-
+    pass
 
 items = [3, 6, 1, 5, 4, 2]
 print(quicksort(items) == [1, 2, 3, 4, 5, 6])  # --> True
