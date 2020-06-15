@@ -9,10 +9,6 @@ def binary_search(items, value):
     pass
 
 
-
-
-
-
 my_list = ["a", "b", "c", "d", "e", "f", "g"] 
 
 result = binary_search(my_list, "e")

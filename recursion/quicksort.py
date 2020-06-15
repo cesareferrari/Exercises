@@ -13,7 +13,6 @@ Algorithm:
 def quicksort(items):
     pass
 
-
 items = [3, 6, 1, 5, 4, 2]
 print(quicksort(items) == [1, 2, 3, 4, 5, 6])  # --> True
 print(items == [3, 6, 1, 5, 4, 2])             # --> True
